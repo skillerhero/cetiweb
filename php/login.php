@@ -4,9 +4,9 @@ $usuario=$_REQUEST['user'];
 $contrasena=$_REQUEST['pass'];
 
 if($usuario=='admin' and $contrasena=='admin'){
-	header('../html/menuAdm.html');
+	include '../html/menuAdm.html';
 }
 else{
-	header('../index.html');
+	include '../index.html';
 }
 ?>
