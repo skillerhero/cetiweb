@@ -108,14 +108,15 @@ input[type=submit]{
 	}
 	input[type=submit]{
 		height: 5em;
-		width: 7.1em;
+		width: 6em;
 
 	}
 	.botonesMenuAdm{
-		margin-left: 30px;;
-		margin-top: 50px;
+		margin-left: 10px;
+		margin-left: 10px;
+		margin-top: 40px;
 		white-space: normal;
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 		height: 6.5em;
 		width: 6.5em;
 	}
