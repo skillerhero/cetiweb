@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <title>Calificaciones</title>
+  <link rel='stylesheet' type='text/css' href='../css/estilos.css' >
+</head>
+
+<body>
+
+  <h1>Formulario de Calificaciones</h1>
+
+
+  <form action="FormulariosProyectoPW.php" method="post" name="formAgregar">
+    <h3>Añadir</h3>
+    <p>Registro del alumno </p><input type="text" name = "registroAgregar" />
+    <p>Id Asignatura: </p><input type="text" name = "idAsignatura" />
+    <p>Calificacion: </p><input type="text" name = "calificacion" />
+    <p>Periodo: </p><input type="text" name = "periodo" />
+    <p>Id Docente: </p><input type="text" name = "idDocente" />
+    <br><input type ="submit" value="&#10010;  Agregar" class="botonAgregar" />
+  </form>
+
+
+  <form action="FormulariosProyectoPW.php" method="post" name="formEliminar">
+    <h3>Eliminar</h3>
+    <p>Nombre </p><input type="text" name = "nombreEliminar" />
+    <br><input type ="submit" value="&#128270;Buscar" class="botonBuscar" />
+    <input type ="submit" value="&#10007;  Eliminar" class="botonEliminar" />
+  </form>
+
+  <form action="FormulariosProyectoPW.php" method="post" name="formModificar">
+    <h3>Modificar</h3>
+    <p>Registro del alumno </p><input type="text" name = "registroAgregar" />
+    <p>Id Asignatura: </p><input type="text" name = "idAsignatura" />
+    <p>Calificacion: </p><input type="text" name = "calificacion" />
+    <p>Periodo: </p><input type="text" name = "periodo" />
+    <p>Id Docente: </p><input type="text" name = "idDocente" />
+    <br><input type ="submit" value="&#128270;  Buscar" class="botonBuscar" />
+    <input type ="submit" value="&#9998;  Modificar" class="botonModificar" />
+  </form>
+
+
+</body>
+
+
+
+</html>
