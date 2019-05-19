@@ -10,7 +10,6 @@ if($usuario=='admin' and $contrasena=='admin'){
 else{
 
 	echo "<script type=\"text/javascript\">
-	window.location.href='../index.php';
 	window.alert("Usuario y/o contrasena incorrecta");
 	</script>";
 }
