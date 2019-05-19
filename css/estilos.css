@@ -97,6 +97,9 @@ input[type=submit]{
 		text-align: center;
 		width: 70%;
 		height: 70%;
+
+	}
+	body{
 		background-size: 720px 478px;
 		background-size: 100vw 66vh;
 	}
@@ -108,6 +111,10 @@ input[type=submit]{
 	height: 5em;
  	width: 7em;
 
+	}
+	.botonesMenuAdm{
+	height: 17em;
+ 	width: 17em;
 	}
 
 }
