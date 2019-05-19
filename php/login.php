@@ -10,7 +10,7 @@ if($usuario=='admin' and $contrasena=='admin'){
 else{
 	echo "
 	<script type=\"text/javascript\">
-	alert("Usuario y/o contraseña incorrecta");
+	alert("Usuario y/o contrasena incorrecta");
 	</script>
 	";
 	echo "<script type=\"text/javascript\">
