@@ -112,18 +112,19 @@ input[type=submit]{
 
 	}
 	.botonesMenuAdm{
-		margin-top: 50px
+		margin-left: 30px;;
+		margin-top: 50px;
 		white-space: normal;
 		margin-bottom: 50px;
 		height: 6.5em;
-		width: 6.5em
+		width: 6.5em;
 	}
 	.wantiwrapping{
 		margin-top : 30px;
 	}
 	.botonModificar{
 		padding: 13px;
-		font-size: 
+		font-size: 13px;
 	}
 
 }
