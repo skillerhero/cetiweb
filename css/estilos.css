@@ -90,22 +90,22 @@ input[type=submit]{
     white-space: nowrap;
     overflow: hidden;
 }
-@media all and (max-width: 700px){
+@media all and (max-width: 720px){
 	form{
 		white-space: nowrap;
   		overflow: hidden;
 		text-align: center;
 		width: 70%;
 		height: 70%;
-		background-size: 720px 720px;
+		background-size: 720px 478px;
 	}
 	input[type=text],input[type=password],button,select{
 		width: 200px;
 		height: 20px;
 	}
 	input[type=submit]{
-	height: 5em;
- 	width: 5em;
+	height: 6em;
+ 	width: 6em;
 
 	}
 
