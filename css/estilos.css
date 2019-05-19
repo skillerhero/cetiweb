@@ -97,15 +97,15 @@ input[type=submit]{
 		text-align: center;
 		width: 70%;
 		height: 70%;
-		background-size: 720px 1080px;
+		background-size: 720px 720px;
 	}
-	input[type=text],button,select{
+	input[type=text],input[type=password],button,select{
 		width: 200px;
 		height: 20px;
 	}
-	input[type=submit],input[type=password]{
-	height: 7em;
- 	width: 7em;
+	input[type=submit]{
+	height: 5em;
+ 	width: 5em;
 
 	}
 
