@@ -8,7 +8,7 @@ if($usuario=='admin' and $contrasena=='admin'){
 	</script>";
 }
 else{
-
+	echo "alert('Usuario y/o contraseña incorrecta');";
 	echo "<script type=\"text/javascript\">
 	window.location.href='../index.php';
 	</script>";
