@@ -4,9 +4,9 @@ $usuario=$_REQUEST['user'];
 $contrasena=$_REQUEST['pass'];
 
 if($usuario=='admin' and $contrasena=='admin'){
-	include '../html/menuAdm.html';
+	echo "window.location.href='../html/menuAdm.html';";
 }
 else{
-	include 'index.html';
+	echo "window.location.href='../index.php';";
 }
 ?>
