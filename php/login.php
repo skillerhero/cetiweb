@@ -1,12 +1,16 @@
-
 <?php
 $usuario=$_REQUEST['user'];
 $contrasena=$_REQUEST['pass'];
 
 if($usuario=='admin' and $contrasena=='admin'){
-	echo "window.location.href='../html/menuAdm.html';";
+	echo "<script type=\"text/javascript\">
+	window.location.href='../html/menuAdm.html';
+	</script>";
 }
 else{
-	echo "window.location.href='../index.php';";
+
+	echo "<script type=\"text/javascript\">
+	window.location.href='../index.php';
+	</script>";
 }
 ?>
