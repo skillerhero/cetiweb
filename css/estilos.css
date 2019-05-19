@@ -92,7 +92,21 @@ input[type=submit]{
 }
 @media screen and (max-width: 800px){
 	form{
+		white-space: nowrap;
+  		overflow: hidden;
+		text-align: center;
 		width: 70%;
+		height: 70%;
+		background-size: 720px 1080px;
+	}
+	input[type=text],button,select{
+		width: 200px;
+		height: 20px;
+	}
+	input[type=submit]{
+	height: 7em;
+ 	width: 7em;
+
 	}
 
 }
