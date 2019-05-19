@@ -20,7 +20,7 @@
 	</form>
 	<?php 
 	function login(){
-		if(isset($_POST['submit']))
+		if(isset($_GET['submit']))
 		{
 			$usuario=$_REQUEST['user'];
 			$contrasena=$_REQUEST['pass'];
