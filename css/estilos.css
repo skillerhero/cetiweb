@@ -6,9 +6,9 @@ form{
 	margin-bottom: 50px;
 	padding: 10px;
 	width: 40%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: center;
 }
 
 body{
@@ -79,21 +79,21 @@ input[type=submit]{
 }
 .botonesMenuAdm{
 	height: 15em;
- 	width: 15em;
- 	margin-bottom: 25px;
- 	margin-right: 25px;
- 	color: white;
- 	border-radius: 10px;
+	width: 15em;
+	margin-bottom: 25px;
+	margin-right: 25px;
+	color: white;
+	border-radius: 10px;
 }
 .antiwrapping{
 	text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
+	white-space: nowrap;
+	overflow: hidden;
 }
 @media all and (max-width: 720px){
 	form{
 		white-space: nowrap;
-  		overflow: hidden;
+		overflow: hidden;
 		text-align: center;
 		width: 70%;
 		height: 70%;
@@ -107,14 +107,19 @@ input[type=submit]{
 		height: 20px;
 	}
 	input[type=submit]{
-	height: 5em;
- 	width: 7.1em;
+		height: 5em;
+		width: 7.1em;
 
 	}
 	.botonesMenuAdm{
-	margin-bottom: 30px;
-	height: 6em;
- 	width: 6em;
+		margin-top: 20px
+		white-space: normal;
+		margin-bottom: 20px;
+		height: 6.5em;
+		width: 6.5em
+	}
+	.botonModificar{
+		padding: 10px;
 	}
 
 }
