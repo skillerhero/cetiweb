@@ -7,6 +7,6 @@ if($usuario=='admin' and $contrasena=='admin'){
 	include '../html/menuAdm.html';
 }
 else{
-	include '../index.html';
+	include 'index.html';
 }
 ?>
