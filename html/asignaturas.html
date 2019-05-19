@@ -8,32 +8,49 @@
 	</head>
   
 	<body>
-	<div class='fondo'>
-	<div class='centrar'> <h1>Formulario de asignaturas</h1>
+	<h1>Formulario de asignaturas</h1>
 	
-		<form action="FormulariosProyectoPW.php" method="post" name="formAgregar">
-			<h3>Añadir</h3>
-			<p>Nombre: </p><input type="text" name = "nombreAgregar" />
-			<p>Id Academia: </p><input type="text" name = "idAcademiaAgregar" />
+		<form action="" method="post" name="formAgregar">
+			<h2>Añadir</h2>
+			<p>Nombre</p><input type="text" name = "nombreAgregar" required autofocus />
+			<p>Academia</p>
+			<select>
+				<option value="SD">Sistemas Digitales</option>
+				<option value="Redes">Redes</option>
+				<option value="Electronica">Electrónica</option>
+				<option value="Programacion">Programación</option>
+			</select> 
 			<br><input type ="submit" value="&#10010;  Agregar" class="botonAgregar" />
 		</form>
 		
-		<form action="FormulariosProyectoPW.php" method="post" name="formEliminar">
-			<h3>Eliminar</h3>
-			<p>Nombre: </p><input type="text" name = "nombreEliminar" />
+		<form action="" method="post" name="formEliminar">
+			<h2>Eliminar</h2>
+			<p>Nombre</p><input type="text" name = "nombreEliminar" />
+			<p>Academia</p>
+			<select>
+				<option value="SD">Sistemas Digitales</option>
+				<option value="Redes">Redes</option>
+				<option value="Electronica">Electrónica</option>
+				<option value="Programacion">Programación</option>
+			</select> 
 			<br><input type ="submit" value="&#128270;  Buscar" class="botonBuscar" />
 			<input type ="submit" value="&#10007;  Eliminar" class="botonEliminar" />
 		</form>
 
-		<form action="FormulariosProyectoPW.php" method="post" name="formModificar">
-			<h3>Modificar</h3>
-			<p>Nombre: </p><input type="text" name = "nombreModificar" />
-			<p>Id Academia: </p><input type="text" name = "idAcademiaModificar" />
+		<form action="" method="post" name="formModificar">
+			<h2>Modificar</h2>
+			<p>Nombre</p><input type="text" name = "nombreModificar" />
+			<p>Academia</p>
+			<select>
+				<option value="SD">Sistemas Digitales</option>
+				<option value="Redes">Redes</option>
+				<option value="Electronica">Electrónica</option>
+				<option value="Programacion">Programación</option>
+			</select> 
 			<br><br><input type ="submit" value="&#128270;  Buscar" class="botonBuscar" />
 			<input type ="submit" value="&#9998;  Modificar" class="botonModificar" />
 		</form>
 		
   </body>
-  </div>
-  </div>
+
 </html>

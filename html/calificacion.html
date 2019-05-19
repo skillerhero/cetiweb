@@ -11,31 +11,58 @@
   <h1>Formulario de Calificaciones</h1>
 
 
-  <form action="FormulariosProyectoPW.php" method="post" name="formAgregar">
-    <h3>Añadir</h3>
-    <p>Registro del alumno </p><input type="text" name = "registroAgregar" />
-    <p>Id Asignatura: </p><input type="text" name = "idAsignatura" />
-    <p>Calificacion: </p><input type="text" name = "calificacion" />
-    <p>Periodo: </p><input type="text" name = "periodo" />
-    <p>Id Docente: </p><input type="text" name = "idDocente" />
+  <form action="" method="post" name="formAgregar">
+    <h2>Añadir</h2>
+    <p>Asignatura</p>
+    <select>
+      <option value="pw">Programación web</option>
+      <option value="pa">Programación avanzada</option>
+      <option value="pm2">Programación móvil 2</option>
+    </select>
+    <p>Docente</p>
+    <select>
+      <option value="areli">Areli</option>
+      <option value="gusa">Gusa</option>
+      <option value="sergio">Sergio</option>
+    </select>  
+    <p>Periodo</p><input type="text" name = "periodo" />
+    <p>Registro</p><input type="text" name = "registroAgregar" />
+    <p>Calificacion</p><input type="text" name = "calificacion" />
     <br><input type ="submit" value="&#10010;  Agregar" class="botonAgregar" />
   </form>
 
 
-  <form action="FormulariosProyectoPW.php" method="post" name="formEliminar">
-    <h3>Eliminar</h3>
-    <p>Nombre </p><input type="text" name = "nombreEliminar" />
+  <form action="" method="post" name="formEliminar">
+    <h2>Eliminar</h2>
+    <p>Asignatura</p>
+    <select>
+      <option value="pw">Programación web</option>
+      <option value="pa">Programación avanzada</option>
+      <option value="pm2">Programación móvil 2</option>
+    </select>
+    <p>Periodo</p><input type="text" name = "periodo" />
+    <p>Registro</p><input type="text" name = "registro" />
     <br><input type ="submit" value="&#128270;Buscar" class="botonBuscar" />
     <input type ="submit" value="&#10007;  Eliminar" class="botonEliminar" />
   </form>
 
-  <form action="FormulariosProyectoPW.php" method="post" name="formModificar">
-    <h3>Modificar</h3>
-    <p>Registro del alumno </p><input type="text" name = "registroAgregar" />
-    <p>Id Asignatura: </p><input type="text" name = "idAsignatura" />
-    <p>Calificacion: </p><input type="text" name = "calificacion" />
-    <p>Periodo: </p><input type="text" name = "periodo" />
-    <p>Id Docente: </p><input type="text" name = "idDocente" />
+  <form action="" method="post" name="formModificar">
+    <h2>Modificar</h2>
+    <p>Asignatura</p>
+    <select>
+      <option value="pw">Programación web</option>
+      <option value="pa">Programación avanzada</option>
+      <option value="pm2">Programación móvil 2</option>
+    </select>
+    <p>Docente</p>
+    <select>
+      <option value="areli">Areli</option>
+      <option value="gusa">Gusa</option>
+      <option value="sergio">Sergio</option>
+    </select>  
+    <p>Periodo</p><input type="text" name = "periodo" />
+    <p>Registro</p><input type="text" name = "registroAgregar" />
+    <p>Calificacion</p><input type="text" name = "calificacion" />
     <br><input type ="submit" value="&#128270;  Buscar" class="botonBuscar" />
     <input type ="submit" value="&#9998;  Modificar" class="botonModificar" />
   </form>
