@@ -6,6 +6,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel='stylesheet' type='text/css' href='css/estilos.css' >
+	<link rel='stylesheet' type='text/css' href='../css/estilos.css' >
 	<title>Login</title>
 </head>
 <body style="background-image: url(imagenes/login.jpg);">
