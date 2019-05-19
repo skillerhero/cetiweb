@@ -108,7 +108,7 @@ input[type=submit]{
 	}
 	input[type=submit]{
 		height: 5em;
-		width: 7.5em;
+		width: 6em;
 
 	}
 	.botonesMenuAdm{
@@ -126,6 +126,7 @@ input[type=submit]{
 	.botonModificar{
 		padding: 13px;
 		font-size: 13px;
+		width: 7.7em !important;
 	}
 
 }
