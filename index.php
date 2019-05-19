@@ -7,7 +7,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<link rel='stylesheet' type='text/css' href='css/estilos.css' >
-	<link rel="icon" type="image/png" sizes="96x96" href="imagenes/favicon.png">
+	<link rel="shortcut icon" type="image/png" href="imagenes/favicon.png">
 	<title>Login</title>
 </head>
 <body style="background-image: url(imagenes/login.jpg);">
