@@ -112,8 +112,9 @@ input[type=submit]{
 
 	}
 	.botonesMenuAdm{
-	height: 10em;
- 	width: 10em;
+	margin-bottom: 30px;
+	height: 6em;
+ 	width: 6em;
 	}
 
 }
