@@ -11,7 +11,7 @@ else{
 
 	echo "<script type=\"text/javascript\">
 	window.location.href='../index.php';
-	alert("Usuario y/o contrasena incorrecta");
+	window.alert("Usuario y/o contrasena incorrecta");
 	</script>";
 }
 ?>
