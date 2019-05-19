@@ -1,9 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 
 <head>
+	<meta name="viewport" content="width=device-width">
 	<meta charset="UTF-8">
 	<link rel='stylesheet' type='text/css' href='css/estilos.css' >
 	<title>Login</title>
