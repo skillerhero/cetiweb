@@ -101,7 +101,6 @@ input[type=submit]{
 	}
 	body{
 		background-size: 720px 478px;
-		background-size: 100vw 66vh;
 	}
 	input[type=text],input[type=password],button,select{
 		width: 200px;
