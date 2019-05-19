@@ -12,7 +12,7 @@
 
 			<h1>Bienvenido!</h1>
 			
-		<form name="formLogin" method="get" action="php/login.php"  style="background:rgba(255,255,255,0.4);">
+		<form name="formLogin" method="post" action="php/login.php"  style="background:rgba(255,255,255,0.4);">
 			<h2>Iniciar sesión</h2>
 			<br><input class="input" type="text" name="user" placeholder="&#128100;  Usuario" required autofocus>
 			<br><input type="password" name="pass" placeholder="&#9998;  Contraseña"required></br>
