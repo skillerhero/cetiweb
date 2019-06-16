@@ -35,6 +35,33 @@ input[type=submit]{
 	padding: 15px;
 	border-radius: 5px;
 }
+table{
+	border-collapse: collapse;
+	margin: 25px 0;
+	font-size: 0.9em;
+	min-width: 400px;
+	background:rgba(255,255,255,0.4);
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.15);
+	word-break: break-all;
+	word-wrap:break-word;
+}
+table thead tr{
+	background-color: #009879;
+	color: black;
+	text-align: left;
+	font-weight: bold;
+}	
+table th, table td{
+	padding:12px 15px;
+}
+table tbody tr{
+	border-bottom: 1px solid #dddddd;
+}
+
 .margen{
 	margin-bottom: 20px;
 }
@@ -90,43 +117,100 @@ input[type=submit]{
 	white-space: nowrap;
 	overflow: hidden;
 }
-@media all and (max-width: 720px){
-	form{
-		white-space: nowrap;
-		overflow: hidden;
-		text-align: center;
-		width: 70%;
-		height: 70%;
-
-	}
-	body{
-		background-size: 720px 600px;
-	}
-	input[type=text],input[type=password],button,select{
-		width: 200px;
-		height: 20px;
-	}
-	input[type=submit]{
-		height: 4em;
-		width: 7em;
-
-	}
-	.botonesMenuAdm{
-		margin-left: 8px;
-		margin-left: 8px;
-		margin-top: 35px;
-		white-space: normal;
-		margin-bottom: 35px;
-		height: 6.5em;
-		width: 6.5em;
-	}
-	.wantiwrapping{
-		margin-top : 30px;
-	}
-	.botonModificar{
-		padding: 13px;
-		font-size: 13px;
-		width: 8em !important;
-	}
-
+.btnesControl{
+	position:fixed;
+	left:7%;
+	top:10%;
 }
+.botonHome{
+	height: 52px;
+	padding: 10px;
+	padding-left:20px;
+	padding-right:20px;
+	border-radius:3px;
+	color: white;
+	animation-name:bgchange;
+	animation-duration:3s;
+	animation-iteration-count:infinite;
+}
+.botonBack{
+	width: 70px;
+	height: 52px;
+	padding: 10px;
+	padding-left:10px;
+	padding-right:10px;
+	border-radius:3px;
+	color: white;
+	animation-name:bgchange;
+	animation-duration:3s;
+	animation-iteration-count:infinite;
+}
+
+@keyframes bgchange{
+	0%{background-color:#1abc9c;
+		border-color:#1abc9c; }
+		25%{background-color:#e74c3c;
+			border-color:#e74c3c; }
+			50%{background-color:#3498db;
+				border-color:#3498db; }
+				75%{background-color:#202020;
+					border-color: #202020;}
+					100%{background-color:#1abc9c;
+						border-color: #1abc9c;}
+					}
+
+					@media all and (max-width: 720px){
+						form{
+							white-space: nowrap;
+							overflow: hidden;
+							text-align: center;
+							width: 70%;
+							height: 70%;
+
+						}
+						body{
+							background-size: 1024px 1024px;
+							background-attachment: fixed;
+						}
+						input[type=text],input[type=password],button,select{
+							width: 200px;
+							height: 20px;
+						}
+						input[type=submit]{
+							height: 4em;
+							width: 7em;
+
+						}
+						.botonesMenuAdm{
+							margin-left: 8px;
+							margin-left: 8px;
+							margin-top: 35px;
+							white-space: normal;
+							margin-bottom: 35px;
+							height: 6.5em;
+							width: 6.5em;
+						}
+						.wantiwrapping{
+							margin-top : 30px;
+						}
+						.botonModificar{
+							padding: 13px;
+							font-size: 13px;
+							width: 8em !important;
+						}
+						.botonHome{
+							height: 40px;
+							width: 60px;
+							padding: 10px;
+							padding-left:20px;
+							padding-right:20px;
+						}
+						.botonBack{
+							width: 45px;
+							height: 40px;
+							padding: 10px;
+							padding-left:10px;
+							padding-right:10px;
+						}
+
+					}
