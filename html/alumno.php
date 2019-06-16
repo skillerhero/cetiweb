@@ -114,24 +114,7 @@ if($contador==0){
 echo "<h2>Calificaciones</h2>";
 $asignatura="";
 $profesor="";
-$sql="select *from calificacion where registro=".$id.";";
-$resultado=mysqli_query($conexion,$sql);
-if(($filas=mysqli_fetch_assoc($resultado))){
-$asignatura=$filas['id_asignatura'];
-$profesor=$filas['nomina'];
-}
 
-$sql="select *from asignatura where Id_Asignatura='".$asignatura."';";
-$resultado=mysqli_query($conexion,$sql);
-if(($filas=mysqli_fetch_assoc($resultado))){
-$asignatura=$filas['nombre'];
-}
-
-$sql="select *from docente where id_docente=".$profesor.";";
-$resultado=mysqli_query($conexion,$sql);
-if(($filas=mysqli_fetch_assoc($resultado))){
-$profesor=$filas['nombre']." ".$filas['apellido_paterno'].".".$filas['apellido_materno'];
-}
 //th columna, tr fila y td dato
 echo "<table>\n
 <thead>
@@ -150,6 +133,22 @@ $sql="select *from calificacion where registro=".$id.";";
 $resultado=mysqli_query($conexion,$sql);
 while($filas=mysqli_fetch_assoc($resultado))
 {	
+
+$asignatura=$filas['id_asignatura'];
+$profesor=$filas['nomina'];
+
+
+$sql="select *from asignatura where Id_Asignatura='".$asignatura."';";
+$resultado1=mysqli_query($conexion,$sql);
+if(($filas1=mysqli_fetch_assoc($resultado1))){
+$asignatura=$filas1['nombre'];
+}
+
+$sql="select *from docente where id_docente=".$profesor.";";
+$resultado1=mysqli_query($conexion,$sql);
+if(($filas1=mysqli_fetch_assoc($resultado1))){
+$profesor=$filas1['nombre']." ".$filas1['apellido_paterno'].".".$filas1['apellido_materno'];
+}
 	echo "<tr>";
 	echo "<td>".$filas['clave_cursa']."</td>";
 	echo "<td>".$asignatura."</td>";

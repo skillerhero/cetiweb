@@ -94,7 +94,7 @@ if($contador==0){
 }
 
 $academy="";
-$sql="select *from docente";
+$sql="select *from docente where id_docente=".$id.";";
 $resultado=mysqli_query($conexion,$sql);
 while($filas=mysqli_fetch_assoc($resultado))
 {

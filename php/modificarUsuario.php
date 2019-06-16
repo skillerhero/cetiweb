@@ -3,6 +3,7 @@ include 'conexion.php';
 $usuario=$_REQUEST['usuario'];
 $id=$_REQUEST['id'];
 $contra=$_REQUEST['pass'];
+$contra=password_hash($contra, PASSWORD_DEFAULT);
 $tipo=$_REQUEST['tipo'];
 
 $sql="update usuario set usuario='".$usuario."',contrasena='".$contra."',tipo_usuario='".$tipo."' where id_usuario =".$id.";";
