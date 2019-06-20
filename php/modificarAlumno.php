@@ -32,7 +32,7 @@ $resultado=mysqli_query($conexion,$sql);
 $resultadoMunicipio=mysqli_fetch_assoc($resultado);
 
 
-$sql="update alumno set registro=".$nuevoRegistro.", domicilio='".$domicilio."', celular=".$celular.",sexo='".$genero."',APELLIDO_MATERNO='".$apellidoM."',APELLIDO_PATERNO='".$apellidoP."',colonia='".$colonia."',nombre='".$nombre."' where registro =".$registro.";";
+$sql="update alumno set registro=".$nuevoRegistro.", domicilio='".$domicilio."', celular=".$celular.",sexo='".$genero."',APELLIDO_MATERNO='".$apellidoM."',APELLIDO_PATERNO='".$apellidoP."',colonia='".$colonia."',nombre='".$nombre."',id_carrera=".$carrera." where registro =".$registro.";";
 
 mysqli_query($conexion,$sql);
 if(mysqli_affected_rows($conexion) > 0){

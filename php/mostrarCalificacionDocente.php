@@ -43,61 +43,62 @@ $academia=$filas['id_academia'];
 }
 
 echo "<h2>Asignaturas dentro de esta tabla:</h2>";
-$sql="select *from asignatura where id_academia=".$academia.";";
+$sql="select asignatura.id_asignatura, asignatura.nombre as nombreAsignatura, academia.nombre as nombreAcademia from asignatura inner join academia on asignatura.id_academia = academia.id_academia where academia.id_academia=".$academia.";";
 $resultado=mysqli_query($conexion,$sql);
-
 
 //th columna, tr fila y td dato
 echo "<table>\n
-<thead>
-<tr>
-<th>Id_Asignatura</th>
-<th>nombre</th>
-<th>id_academia</th>
-</tr>
-</thead>
+	<thead>
+	<tr>
+	<th>Id</th>
+	<th>Nombre</th>
+	<th>Academia</th>
+	</tr>
+	</thead>
 ";
 
 while($filas=mysqli_fetch_assoc($resultado))
 {	
-	echo "<tr>";
-	echo "<td>".$filas['Id_Asignatura']."</td>";
-	echo "<td>".$filas['nombre']."</td>";
-	echo "<td>".$filas['id_academia']."</td>";
-	echo "</tr>";
+		echo "<tr>";
+		echo "<td>".$filas['id_asignatura']."</td>";
+		echo "<td>".$filas['nombreAsignatura']."</td>";
+		echo "<td>".$filas['nombreAcademia']."</td>";
+		echo "</tr>";
 }
 echo "</table>";
 
 
 echo "<h2>Calificaciones dentro de esta tabla:</h2>";
-$sql="select *from calificacion where nomina=".$id.";";
+$sql="select calificacion.clave_cursa, asignatura.nombre as nombreAsignatura, alumno.registro,alumno.nombre as nombreAlumno,calificacion.periodo,calificacion.calificacion,docente.nombre as nombreDocente from calificacion inner join asignatura on calificacion.id_asignatura= asignatura.id_asignatura inner join alumno on calificacion.registro = alumno.registro inner join docente on calificacion.nomina=docente.id_docente where nomina=".$id.";";
 $resultado=mysqli_query($conexion,$sql);
 
 
 //th columna, tr fila y td dato
 echo "<table>\n
-<thead>
-<tr>
-<th>clave_cursa</th>
-<th>id_asignatura</th>
-<th>registro</th>
-<th>periodo</th>
-<th>calificacion</th>
-<th>nomina</th>
-</tr>
-</thead>
+	<thead>
+	<tr>
+	<th>Id</th>
+	<th>Asignatura</th>
+	<th>Registro</th>
+	<th>Alumno</th>
+	<th>Periodo</th>
+	<th>Calificación</th>
+	<th>Docente</th>
+	</tr>
+	</thead>
 ";
 
 while($filas=mysqli_fetch_assoc($resultado))
 {	
-	echo "<tr>";
-	echo "<td>".$filas['clave_cursa']."</td>";
-	echo "<td>".$filas['id_asignatura']."</td>";
-	echo "<td>".$filas['registro']."</td>";
-	echo "<td>".$filas['periodo']."</td>";
-	echo "<td>".$filas['calificacion']."</td>";
-	echo "<td>".$filas['nomina']."</td>";
-	echo "</tr>";
+		echo "<tr>";
+		echo "<td>".$filas['clave_cursa']."</td>";
+		echo "<td>".$filas['nombreAsignatura']."</td>";
+		echo "<td>".$filas['registro']."</td>";
+		echo "<td>".$filas['nombreAlumno']."</td>";
+		echo "<td>".$filas['periodo']."</td>";
+		echo "<td>".$filas['calificacion']."</td>";
+		echo "<td>".$filas['nombreDocente']."</td>";
+		echo "</tr>";
 }
 echo "</table>";
 ?>
