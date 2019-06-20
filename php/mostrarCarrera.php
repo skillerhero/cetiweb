@@ -35,7 +35,7 @@ die();
 	</div>
 <?php
 include 'conexion.php';
-echo "<h2>Carreras dentro de esta tabla:</h2>";
+echo "<h2>Carreras:</h2>";
 $sql="select *from carrera;";
 $resultado=mysqli_query($conexion,$sql);
 
@@ -44,7 +44,7 @@ $resultado=mysqli_query($conexion,$sql);
 echo "<table>\n
 <thead>
 <tr>
-<th>id_carrera</th>
+<th>Id</th>
 <th>nombre</th>
 </tr>
 </thead>

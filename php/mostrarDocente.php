@@ -35,8 +35,8 @@ die();
 	</div>
 <?php
 include 'conexion.php';
-echo "<h2>Docentes dentro de esta tabla:</h2>";
-$sql="select *from docente;";
+echo "<h2>Docentes:</h2>";
+$sql="select docente.id_docente, academia.nombre as nombreAcademia, docente.nombre as nombreDocente,docente.apellido_paterno,docente.apellido_materno, usuario.usuario from docente inner join academia on docente.id_academia = academia.id_academia inner join usuario on docente.id_usuario = usuario.id_usuario;";
 $resultado=mysqli_query($conexion,$sql);
 
 
@@ -44,12 +44,12 @@ $resultado=mysqli_query($conexion,$sql);
 echo "<table>\n
 <thead>
 <tr>
-<th>id_docente</th>
-<th>id_academia</th>
-<th>apellido_materno</th>
-<th>apellido_paterno</th>
-<th>nombre</th>
-<th>id_usuario</th>
+<th>Nómina</th>
+<th>Academia</th>
+<th>Nombre</th>
+<th>Apellido paterno</th>
+<th>Apellido materno</th>
+<th>Usuario</th>
 </tr>
 </thead>
 ";
@@ -58,42 +58,42 @@ while($filas=mysqli_fetch_assoc($resultado))
 {	
 	echo "<tr>";
 	echo "<td>".$filas['id_docente']."</td>";
-	echo "<td>".$filas['id_academia']."</td>";
-	echo "<td>".$filas['apellido_materno']."</td>";
+	echo "<td>".$filas['nombreAcademia']."</td>";
+	echo "<td>".$filas['nombreDocente']."</td>";
 	echo "<td>".$filas['apellido_paterno']."</td>";
-	echo "<td>".$filas['nombre']."</td>";
-	echo "<td>".$filas['id_usuario']."</td>";
+	echo "<td>".$filas['apellido_materno']."</td>";
+	echo "<td>".$filas['usuario']."</td>";
 	echo "</tr>";
 }
 echo "</table>";
 
-echo "<h2>Academias dentro de esta tabla:</h2>";
-$sql="select *from academia;";
+	echo "<h2>Academias:</h2>";
+	$sql="select academia.id_academia, academia.nombre as nombreAcademia, carrera.nombre as nombreCarrera from academia inner join carrera on academia.id_carrera = carrera.id_carrera;";
 $resultado=mysqli_query($conexion,$sql);
 
 
 //th columna, tr fila y td dato
 echo "<table>\n
-<thead>
-<tr>
-<th>id_academia</th>
-<th>nombre</th>
-<th>id_carrera</th>
-</tr>
-</thead>
+	<thead>
+	<tr>
+	<th>Id</th>
+	<th>Nombre</th>
+	<th>Carrera</th>
+	</tr>
+	</thead>
 ";
 
 while($filas=mysqli_fetch_assoc($resultado))
 {	
-	echo "<tr>";
-	echo "<td>".$filas['id_academia']."</td>";
-	echo "<td>".$filas['nombre']."</td>";
-	echo "<td>".$filas['id_carrera']."</td>";
-	echo "</tr>";
+		echo "<tr>";
+		echo "<td>".$filas['id_academia']."</td>";
+		echo "<td>".$filas['nombreAcademia']."</td>";
+		echo "<td>".$filas['nombreCarrera']."</td>";
+		echo "</tr>";
 }
 echo "</table>";
 
-echo "<h2>Usuarios dentro de esta tabla:</h2>";
+echo "<h2>Usuarios:</h2>";
 $sql="select *from usuario;";
 $resultado=mysqli_query($conexion,$sql);
 
@@ -102,10 +102,10 @@ $resultado=mysqli_query($conexion,$sql);
 echo "<table>\n
 <thead>
 <tr>
-<th>id_usuario</th>
-<th>usuario</th>
-<th>contraseña</th>
-<th>tipo_usuario</th>
+<th>Id</th>
+<th>Usuario</th>
+<th>Contraseña</th>
+<th>Tipo</th>
 </tr>
 </thead>
 ";

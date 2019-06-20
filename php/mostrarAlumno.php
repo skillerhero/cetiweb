@@ -35,8 +35,8 @@ die();
 	</div>
 <?php
 include 'conexion.php';
-echo "<h2 style='margin-top: 100px;'>Alumnos dentro de esta tabla:</h2>";
-$sql="select *from alumno;";
+echo "<h2 style='margin-top: 100px;'>Alumnos:</h2>";
+$sql="select alumno.registro, alumno.nombre as nombreAlumno,alumno.apellido_paterno,alumno.apellido_materno,alumno.domicilio,alumno.celular,alumno.sexo,alumno.colonia,municipio.NOMBRE as nombreMunicipio,carrera.nombre as nombreCarrera,usuario.usuario from alumno inner join municipio on alumno.clave_municipio = municipio.clave_municipio inner join carrera on alumno.id_carrera = carrera.id_carrera inner join usuario on alumno.id_usuario=usuario.id_usuario;";
 $resultado=mysqli_query($conexion,$sql);
 
 
@@ -52,9 +52,9 @@ echo "<table>\n
 <th>Celular</th>
 <th>Sexo</th>
 <th>Colonia</th>
-<th>Clave_municipio</th>
-<th>Id_carrera</th>
-<th>Id_usuario</th>
+<th>Municipio</th>
+<th>Carrera</th>
+<th>Usuario</th>
 </tr>
 </thead>
 ";
@@ -62,17 +62,17 @@ echo "<table>\n
 while($filas=mysqli_fetch_assoc($resultado))
 {	
 	echo "<tr>";
-	echo "<td>".$filas['REGISTRO']."</td>";
-	echo "<td>".$filas['NOMBRE']."</td>";
-	echo "<td>".$filas['APELLIDO_PATERNO']."</td>";
-	echo "<td>".$filas['APELLIDO_MATERNO']."</td>";
-	echo "<td>".$filas['DOMICILIO']."</td>";
-	echo "<td>".$filas['CELULAR']."</td>";
-	echo "<td>".$filas['SEXO']."</td>";
-	echo "<td>".$filas['COLONIA']."</td>";
-	echo "<td>".$filas['CLAVE_MUNICIPIO']."</td>";
-	echo "<td>".$filas['ID_CARRERA']."</td>";
-	echo "<td>".$filas['id_usuario']."</td>";
+	echo "<td>".$filas['registro']."</td>";
+	echo "<td>".$filas['nombreAlumno']."</td>";
+	echo "<td>".$filas['apellido_paterno']."</td>";
+	echo "<td>".$filas['apellido_materno']."</td>";
+	echo "<td>".$filas['domicilio']."</td>";
+	echo "<td>".$filas['celular']."</td>";
+	echo "<td>".$filas['sexo']."</td>";
+	echo "<td>".$filas['colonia']."</td>";
+	echo "<td>".$filas['nombreMunicipio']."</td>";
+	echo "<td>".$filas['nombreCarrera']."</td>";
+	echo "<td>".$filas['usuario']."</td>";
 	echo "</tr>";
 }
 echo "</table>";

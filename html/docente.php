@@ -42,7 +42,6 @@ if (isset($_POST['buscar'])){
 	$apellidoP=$_POST['apellidoPa'];
 	$apellidoM=$_POST['apellidoMa'];
 	$sql="select *from docente where nombre='".$nombre."' and apellido_paterno='".$apellidoP."' and apellido_materno='".$apellidoM."';";
-	echo $sql;
 	$resultado=mysqli_query($conexion,$sql);
 	if(mysqli_affected_rows($conexion)>0){
 		$filas=mysqli_fetch_assoc($resultado);

@@ -35,7 +35,7 @@ die();
 	</div>
 <?php
 include 'conexion.php';
-echo "<h2>Municipios dentro de esta tabla:</h2>";
+echo "<h2>Municipios:</h2>";
 $sql="select *from municipio;";
 $resultado=mysqli_query($conexion,$sql);
 
@@ -44,8 +44,8 @@ $resultado=mysqli_query($conexion,$sql);
 echo "<table>\n
 <thead>
 <tr>
-<th>clave_municipio</th>
-<th>nombre</th>
+<th>Id</th>
+<th>Nombre</th>
 </tr>
 </thead>
 ";

@@ -35,7 +35,7 @@ die();
 	</div>
 <?php
 include 'conexion.php';
-echo "<h2>Usuarios dentro de esta tabla:</h2>";
+echo "<h2>Usuarios:</h2>";
 $sql="select *from usuario;";
 $resultado=mysqli_query($conexion,$sql);
 
@@ -44,10 +44,10 @@ $resultado=mysqli_query($conexion,$sql);
 echo "<table>\n
 <thead>
 <tr>
-<th>id_usuario</th>
-<th>usuario</th>
-<th>contraseña</th>
-<th>tipo_usuario</th>
+<th>Id</th>
+<th>Usuario</th>
+<th>Contraseña</th>
+<th>Tipo</th>
 </tr>
 </thead>
 ";

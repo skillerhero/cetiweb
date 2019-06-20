@@ -4,7 +4,7 @@ if(!isset($_SESSION['id']) || !isset($_SESSION['tipo'])){
 	echo "<body style='	background-image: url(../imagenes/restricted.jpg);
 	background-size: 100vw 100vh;
 	background-attachment: fixed;'></body>";
-die();
+	die();
 }
 
 $id=$_SESSION['id'];
@@ -13,7 +13,7 @@ if($tipo!='a'){
 	echo "<body style='	background-image: url(../imagenes/restricted.jpg);
 	background-size: 100vw 100vh;
 	background-attachment: fixed;'></body>";
-die();
+	die();
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
@@ -35,17 +35,17 @@ die();
 	</div>
 	<?php
 	include 'conexion.php';
-	echo "<h2>Academias dentro de esta tabla:</h2>";
-	$sql="select *from academia;";
+	echo "<h2>Academias:</h2>";
+	$sql="select academia.id_academia, academia.nombre as nombreAcademia, carrera.nombre as nombreCarrera from academia inner join carrera on academia.id_carrera = carrera.id_carrera;";
 	$resultado=mysqli_query($conexion,$sql);
 
 //th columna, tr fila y td dato
 	echo "<table>\n
 	<thead>
 	<tr>
-	<th>id_academia</th>
-	<th>nombre</th>
-	<th>id_carrera</th>
+	<th>Id</th>
+	<th>Nombre</th>
+	<th>Carrera</th>
 	</tr>
 	</thead>
 	";
@@ -54,13 +54,13 @@ die();
 	{	
 		echo "<tr>";
 		echo "<td>".$filas['id_academia']."</td>";
-		echo "<td>".$filas['nombre']."</td>";
-		echo "<td>".$filas['id_carrera']."</td>";
+		echo "<td>".$filas['nombreAcademia']."</td>";
+		echo "<td>".$filas['nombreCarrera']."</td>";
 		echo "</tr>";
 	}
 	echo "</table>";
 
-	echo "<br><br><h2>Carreras dentro de esta tabla:</h2>";
+	echo "<br><br><h2>Carreras:</h2>";
 	$sql="select *from carrera;";
 	$resultado=mysqli_query($conexion,$sql);
 
@@ -69,8 +69,8 @@ die();
 	echo "<table>\n
 	<thead>
 	<tr>
-	<th>id_carrera</th>
-	<th>nombre</th>
+	<th>Id</th>
+	<th>Nombre</th>
 	</tr>
 	</thead>
 	";
