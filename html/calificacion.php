@@ -43,7 +43,6 @@ if (isset($_POST['buscar'])){
   $periodo=$_POST['periodo'];
   $registro=$_POST['registro'];
   $sql="select *from calificacion where id_asignatura='".$asignatura."' and periodo='".$periodo."' and registro=".$registro.";";
-  echo $sql;
   $resultado=mysqli_query($conexion,$sql);
   if(mysqli_affected_rows($conexion)>0){
     $filas=mysqli_fetch_assoc($resultado);
