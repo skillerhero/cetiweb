@@ -1,4 +1,4 @@
 # cetiweb
-Pagina web para consultar información de estudiantes y profesores y los profesores pueden subir calificaciones. Base de datos en MySQL.
-Creado por Rafael Leon Estrada,
-Apoyo: Miguel Angel Luis Espinoza
+webpage to get the info of students and teachers in my high school. Teachers can upload grades. DB in MySQL.
+Made by Rafael Leon Estrada,
+Support: Miguel Angel Luis Espinoza
